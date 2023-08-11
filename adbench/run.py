@@ -83,12 +83,11 @@ class RunPipeline():
             from adbench.baseline.DAGMM.run import DAGMM
 
             # from pyod
-            for _ in ['IForest', 'OCSVM', 'CBLOF', 'COF', 'COPOD', 'ECOD', 'FeatureBagging', 'HBOS', 'KNN', 'LODA',
-                      'LOF', 'LSCP', 'MCD', 'PCA', 'SOD', 'SOGAAL', 'MOGAAL', 'DeepSVDD']:
+            for _ in ['COPOD/ECOD']:
                 self.model_dict[_] = PYOD
 
             # DAGMM
-            self.model_dict['DAGMM'] = DAGMM
+#            self.model_dict['DAGMM'] = DAGMM
 
         # semi-supervised algorithms
         elif self.parallel == 'semi-supervise':
